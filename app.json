@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "My Webview App",
-    "slug": "my-webview-app",
+    "name": "HUB Library",
+    "slug": "hub-library",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",

@@ -1,5 +1,6 @@
 import { useRef } from 'react';
-import { RefreshControl, View } from 'react-native';
+import { RefreshControl } from 'react-native';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { WebView } from 'react-native-webview';
 
 import OfflineScreen from './OfflineScreen';
@@ -21,17 +22,19 @@ export default function WebviewContainer() {
   const uri = 'https://hublibrary.netlify.app';
 
   return (
-    <View style={{ flex: 1 }}>
-      <WebView
-        ref={webviewRef}
-        source={{ uri }}
-        pullToRefreshEnabled
-        overScrollMode="never"
-        startInLoadingState
-        refreshControl={
-          <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
-        }
-      />
-    </View>
+    <SafeAreaProvider>
+      <SafeAreaView style={{ flex: 1 }} edges={['top']}>
+        <WebView
+          ref={webviewRef}
+          source={{ uri }}
+          pullToRefreshEnabled
+          overScrollMode="never"
+          startInLoadingState
+          refreshControl={
+            <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+          }
+        />
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
