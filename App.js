@@ -1,5 +1,11 @@
-import WebviewContainer from './components/WebviewContainer';
+import { StatusBar } from "expo-status-bar";
+import WebviewContainer from "./components/WebviewContainer";
 
 export default function App() {
-  return <WebviewContainer />;
+  return (
+    <>
+      <StatusBar style="dark" />
+      <WebviewContainer />
+    </>
+  );
 }

@@ -2,10 +2,21 @@
   "expo": {
     "name": "HUB Library",
     "slug": "hub-library",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "59adfd19-293d-422f-b8c5-c840f34eccf2"
+      }
+    },
+    "android": {
+      "package": "com.hublibrary.hublibrary"
     }
   }
 }
